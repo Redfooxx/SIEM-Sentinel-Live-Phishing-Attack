@@ -23,6 +23,41 @@ On 04/19/2026 16:43:04.563, the first true positive alert came in (Figure 1).A s
 
 *Figure 3: powercat.ps1 from GitHub*
 
+**Establishing Foothold & Reconnaissance**
+
+Once access was established, the attacker executed discovery commands:
+- whoami
+- whoami /priv
+- systeminfo
+- net user
+- net localgroup
+
+This confirms interactive control of the system (Figure 4).
+
+<img width="1913" height="699" alt="1" src="https://github.com/user-attachments/assets/7b404519-256e-4c38-9732-2c37d436fc46" />
+
+*Figure 4: Multiple reconnaissance commands executed via PowerShell*
+
+**Access to Network Share (Lateral Movement / Collection)**
+
+The attacker mapped a network drive: **Z: \\FILESRV-01\SSF-FinancialRecords** (Figure 5). This indicates access to sensitive financial data on a file server.
+
+<img width="1914" height="793" alt="1" src="https://github.com/user-attachments/assets/b239c6f7-277d-4745-bf55-331561c12e15" />
+
+*Figure 5: SSF-FinancialRecords*
+
+**Data Staging and Collection**
+
+The attacker copied files from the network share to a local staging directory: **C:\Users\michael.ascot\downloads\exfiltration\** using **Robocopy.exe** (spawned by PowerShell).
+
+<img width="1914" height="793" alt="1" src="https://github.com/user-attachments/assets/24b259ad-7a7c-403e-8266-4cbae149179c" />
+
+*Figure 6: Robocopy.exe*
+
+
+
+
+
 
 
 <img width="1892" height="788" alt="dashboard 1" src="https://github.com/user-attachments/assets/5901e671-c362-4f22-bd7e-95f69b47c7de" />
