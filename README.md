@@ -54,6 +54,27 @@ The attacker copied files from the network share to a local staging directory: *
 
 *Figure 6: Robocopy.exe*
 
+**Cleanup of Network Access**
+
+After staging the data, the attacker removed the mapped drive: **net use Z: /delete** This indicates intent to reduce forensic artifacts.
+
+<img width="1914" height="793" alt="1" src="https://github.com/user-attachments/assets/cdbbc4ca-e9a0-4901-93b1-55145c6bc55e" />
+
+*Figure 7: Attacker reducing forensic artifacts*
+
+**Data Exfiltration via DNS Tunneling**
+
+The attacker exfiltrated data using DNS queries:
+
+Technique - Files were:
+- Read from disk
+- Encoded in Base64
+- Split into chunks
+- Sent via nslookup to: **\*.haz4rdw4re.io**
+
+<img width="966" height="638" alt="1" src="https://github.com/user-attachments/assets/dda02314-1be3-4248-9b65-d78c688d1a94" />
+
+*Figure 8: Evidence of DNS Tunneling*
 
 
 
@@ -61,7 +82,6 @@ The attacker copied files from the network share to a local staging directory: *
 
 
 <img width="1892" height="788" alt="dashboard 1" src="https://github.com/user-attachments/assets/5901e671-c362-4f22-bd7e-95f69b47c7de" />
-
 *Figure :*
 
 <img width="1833" height="769" alt="dashboard 2 false positives" src="https://github.com/user-attachments/assets/c8f9f82b-22b7-430c-a872-eb9ceaf3d29a" />
