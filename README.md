@@ -70,11 +70,19 @@ Technique - Files were:
 - Read from disk
 - Encoded in Base64
 - Split into chunks
-- Sent via nslookup to: **\*.haz4rdw4re.io**
+- Sent via nslookup to: **\*.haz4rdw4re.io** (Figure 10)
+
+<img width="1628" height="571" alt="1" src="https://github.com/user-attachments/assets/53a96839-6784-45be-a1a7-e2808bfba8a7" />
+
+*Figure 8: Exfiltration of cryptocurrency credentials*
+
+<img width="1634" height="481" alt="1" src="https://github.com/user-attachments/assets/a0eded5b-d950-407a-84c3-174755e8ddad" />
+
+*Figure 9: Attacker exfiltrating file - **exfil8me.zip***
 
 <img width="966" height="638" alt="1" src="https://github.com/user-attachments/assets/dda02314-1be3-4248-9b65-d78c688d1a94" />
 
-*Figure 8: Evidence of DNS Tunneling*
+*Figure 10: Evidence of DNS Tunneling*
 
 
 
